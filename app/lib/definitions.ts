@@ -69,7 +69,7 @@ export type FormattedCustomersTable = {
   email: string;
   image_url: string;
   total_invoices: number;
-  total_pending: string;_id: string;
+  total_pending: number;
   amount: number;
   status: 'pending' | 'paid';
 };
