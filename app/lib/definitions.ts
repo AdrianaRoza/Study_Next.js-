@@ -9,7 +9,7 @@ export type User = {
   password: string;
 };
 
-export type Customer = {
+export type CustomerField = {
   id: string;
   name: string;
   email: string;
@@ -29,16 +29,16 @@ export type Revenue = {
   revenue: number;
 };
 
-export type LatestInvoice = {
+export type InvoiceForm = {
   id: string;
   name: string;
   image_url: string;
   email: string;
-  amount: string;
+  amount: number;
 };
 
 // The database returns a number for amount, but we later format it to a string with the formatCurrency function
-export type LatestInvoiceRaw = Omit<LatestInvoice, 'amount'> & {
+export type LatestInvoiceRaw = Omit<InvoiceForm, 'amount'> & {
   amount: number;
 };
 
